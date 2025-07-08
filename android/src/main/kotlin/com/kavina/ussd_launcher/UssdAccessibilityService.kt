@@ -186,15 +186,15 @@ class UssdAccessibilityService : AccessibilityService() {
         if (event?.eventType == AccessibilityEvent.TYPE_WINDOW_STATE_CHANGED) {
             if (hideDialogs) {
                 // Fermer automatiquement la fenêtre de dialogue USSD
-                performGlobalAction(GLOBAL_ACTION_BACK)
+//                performGlobalAction(GLOBAL_ACTION_BACK)
             }
         }
 
         try {
-            println("Accessibility event received: ${event?.eventType}")
-            println("Event source: ${event?.source}")
-            println("Event class name: ${event?.className}")
-            println("Event package name: ${event?.packageName}")
+//            println("Accessibility event received: ${event?.eventType}")
+//            println("Event source: ${event?.source}")
+//            println("Event class name: ${event?.className}")
+//            println("Event package name: ${event?.packageName}")
             println("Event text: ${event?.text}")
 
             if (event?.eventType == AccessibilityEvent.TYPE_WINDOW_STATE_CHANGED ||
