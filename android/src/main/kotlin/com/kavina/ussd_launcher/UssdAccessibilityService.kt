@@ -186,7 +186,7 @@ class UssdAccessibilityService : AccessibilityService() {
         if (event?.eventType == AccessibilityEvent.TYPE_WINDOW_STATE_CHANGED) {
             if (hideDialogs) {
                 // Fermer automatiquement la fenêtre de dialogue USSD
-                performGlobalAction(GLOBAL_ACTION_BACK)
+//                performGlobalAction(GLOBAL_ACTION_BACK)
             }
         }
 
