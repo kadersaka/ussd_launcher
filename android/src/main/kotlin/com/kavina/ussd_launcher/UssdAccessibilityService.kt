@@ -58,7 +58,7 @@ class UssdAccessibilityService : AccessibilityService() {
                 val bundle = Bundle()
                 bundle.putCharSequence(AccessibilityNodeInfo.ACTION_ARGUMENT_SET_TEXT_CHARSEQUENCE, message)
                 val setTextSuccess = editText.performAction(AccessibilityNodeInfo.ACTION_SET_TEXT, bundle)
-                println("Set text action performed: $setTextSuccess")
+//                println("Set text action performed: $setTextSuccess")
 
                 // Chercher et cliquer sur le bouton de confirmation
                 val button = findConfirmButton(rootInActiveWindow)
@@ -186,7 +186,7 @@ class UssdAccessibilityService : AccessibilityService() {
         if (event?.eventType == AccessibilityEvent.TYPE_WINDOW_STATE_CHANGED) {
             if (hideDialogs) {
                 // Fermer automatiquement la fenêtre de dialogue USSD
-//                performGlobalAction(GLOBAL_ACTION_BACK)
+                performGlobalAction(GLOBAL_ACTION_BACK)
             }
         }
 
@@ -195,7 +195,7 @@ class UssdAccessibilityService : AccessibilityService() {
 //            println("Event source: ${event?.source}")
 //            println("Event class name: ${event?.className}")
 //            println("Event package name: ${event?.packageName}")
-            println("Event text: ${event?.text}")
+//            println("Event text: ${event?.text}")
 
             if (event?.eventType == AccessibilityEvent.TYPE_WINDOW_STATE_CHANGED ||
                 event?.eventType == AccessibilityEvent.TYPE_WINDOW_CONTENT_CHANGED) {
